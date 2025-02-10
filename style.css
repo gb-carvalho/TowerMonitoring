@@ -1,0 +1,161 @@
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 50px;
+    padding: 20px;
+}
+
+.tower {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tower img {
+    height: auto;
+    /*margin-top: 2%;
+    margin-bottom: 8%;*/
+    width: 150px;
+}
+
+.tower .status {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.tower .delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff4444;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tower .edit {
+    position: absolute;
+    top: 23px;
+    right: 5px;
+    background-color: #20247d;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tower .delete:hover {
+    background-color: #cc0000;
+}
+
+.judicial_c_liminar { background-color: #0032bf; }
+.judicial_s_liminar { background-color: #ff4444; }
+.embargada { background-color: #ffbb33; }
+.liberada { background-color: #00C851; }
+
+
+.add-tower-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.add-tower-form input, .add-tower-form select, .add-tower-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-tower-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.tower .delete, .tower .edit {
+    display: none;
+    position: absolute;
+}
+
+.tower:hover .delete, .tower:hover .edit {
+    display: flex;
+}
+
+
+#toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    box-sizing: border-box;
+}
+
+
+#toolbar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toolbar button:hover {
+    background-color: #0056b3;
+}
+
+.logo, .right-space {
+    flex: 1;
+    text-align: left; 
+}
+
+.logo img {
+    height: 35px;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
